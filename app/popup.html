@@ -15,10 +15,10 @@
       </div>
 
       <div ng-controller="DataCtrl">
-        
-        <select ng-model="sportId" ng-options="sport.name for sport in sports" ng-change="change(sportId)">
+
+        <select ng-model="selectedSport" ng-init="sportId = sports[0]" ng-options="sport.name for sport in sports track by sport.id" ng-change="toggleSport(selectedSport)">
         </select>
-        <p>Selected sport: {{sportId}}</p>
+        <p>Selected sport: {{selectedSport.name}} ({{selectedSport.id}})</p>
 
         <table class="table table-bordered">
           <thead>

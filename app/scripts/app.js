@@ -30,21 +30,33 @@ app.controller('DataCtrl', function($scope, $http) {
     { name: "Foootball", id: "4"},
     { name: "Tennis", id: "24"},
   ]
+  $scope.selectedSport = $scope.sports[0]
   $scope.events = [];
 
-  var fetchEvents = function() {
+  $scope.toggleSport = function(selectedSport) {
 
-  	$http.get('https://betfair.betstream.betgenius.com/betstream-view/betfairtennisscorecentre/getBookmakerMappedEvents?sportId=4').
+    console.log("Selecting sport: "+ selectedSport);
+    fetchEvents(selectedSport.id);
+  }
+
+  var fetchEvents = function(sportId) {
+
+  	$http.get('https://betfair.betstream.betgenius.com/betstream-view/betfairtennisscorecentre/getBookmakerMappedEvents?sportId='+sportId).
     success(function(data, status, headers, config) {
+
       $scope.events = data;
+      console.log("Fetched! "+ data.lenght+" events");
+
     }).
     error(function(data, status, headers, config) {
-      // log error
-      $console.log("Error fetching: "+headers)
+
+      $scope.events = [];
+      console.log("Error fetching: "+headers); // log error
     });
   }
 
   // Kick off the fetch
-  fetchEvents();
+  fetchEvents($scope.sports[0].id);
+
 });
 
