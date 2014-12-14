@@ -27,7 +27,8 @@ app.controller('DataCtrl', function($scope, $http) {
     "EventId",
   ]
   $scope.sports = [
-    { name: "Foootball", id: "4"},
+    { name: "Football", id: "10"},
+    { name: "Basketball", id: "4"},
     { name: "Tennis", id: "24"},
   ]
   $scope.selectedSport = $scope.sports[0]
