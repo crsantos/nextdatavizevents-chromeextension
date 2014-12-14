@@ -1,0 +1,47 @@
+<!doctype html>
+<html data-ng-app="myApp" data-ng-csp="">
+  <head>
+    <meta charset="UTF-8">
+    <title>Next DataViz Events</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="container">
+    
+      <h1 class="strong">Next events</h1>
+      <div ng-controller="MainCtrl">
+        {{ date.raw }}
+      </div>
+
+      <div ng-controller="DataCtrl">
+        
+        <select ng-model="sportId" ng-options="sport.name for sport in sports" ng-change="change(sportId)">
+        </select>
+        <p>Selected sport: {{sportId}}</p>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+            <th ng-repeat="column in columns">{{column}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="event in events">
+              <td>{{event.name}}</td>
+              <td>{{event.startTime}}</td>
+              <td>{{event.betgeniusEventId}}</td>
+              <td>{{event.hasCoverage}}</td>
+              <td>{{event.bookmakerEventId}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+    </div>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

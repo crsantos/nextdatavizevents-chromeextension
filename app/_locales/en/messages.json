@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "nextdatavizevents",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Gets a list of the next DataViz Events from BetGenius",
+    "description": "The description of the application"
+  }
+}
