@@ -8,17 +8,15 @@
   </head>
   <body>
     <div class="container">
-    
-      <h1 class="strong">Next events</h1>
-      <div ng-controller="MainCtrl">
-        {{ date.raw }}
-      </div>
 
       <div ng-controller="DataCtrl">
 
+        <h1 class="strong">Next events for {{selectedSport.name}}</h1>
+        <div ng-controller="MainCtrl">
+          <p class="bg-info">{{date | date:'hh:mm:ss, EEE, yyyy-MM-dd'}}</p>
+        </div>
         <select ng-model="selectedSport" ng-init="sportId = sports[0]" ng-options="sport.name for sport in sports track by sport.id" ng-change="toggleSport(selectedSport)">
         </select>
-        <p>Selected sport: {{selectedSport.name}} ({{selectedSport.id}})</p>
 
         <table class="table table-bordered">
           <thead>
