@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="container">
+    <div class="container full-layout">
 
       <div ng-controller="DataCtrl">
 
         <h1 class="strong">Next events for {{selectedSport.name}}</h1>
         <div ng-controller="MainCtrl">
-          <p class="bg-info">{{date | date:'hh:mm:ss, EEE, yyyy-MM-dd'}}</p>
+          <p class="bg-info">{{date | date:'hh:mm:ss, EEE, yyyy/MM/dd'}}</p>
         </div>
         <select ng-model="selectedSport" ng-init="sportId = sports[0]" ng-options="sport.name for sport in sports track by sport.id" ng-change="toggleSport(selectedSport)">
         </select>
@@ -21,7 +21,7 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-            <th ng-repeat="column in columns">{{column}}</th>
+              <th ng-repeat="column in columns">{{column}}</th>
             </tr>
           </thead>
           <tbody>
