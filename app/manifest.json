@@ -12,11 +12,6 @@
     "default_popup": "popup.html"
   },
   "default_locale": "en",
-  "background": {
-    "scripts": [
-      "scripts/chromereload.js"
-    ]
-  },
   "content_scripts": [
     {
       "matches": [
