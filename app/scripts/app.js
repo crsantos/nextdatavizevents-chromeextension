@@ -1,4 +1,4 @@
-app = angular.module('myApp', [])
+app = angular.module('NextDavaVizEvents', [])
 
 // Controller for handling the date
 app.controller('MainCtrl', function($scope, $timeout) {
