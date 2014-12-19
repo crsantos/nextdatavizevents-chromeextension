@@ -12,30 +12,7 @@
         "default_popup": "popup.html"
     },
     "default_locale": "en",
-    "content_scripts": [
-        {
-            "matches": [
-                "http://*/*",
-                "https://*/*"
-            ],
-            "css": [
-                "bower_components/angular/angular-csp.css",
-                "styles/main.css",
-                "bower_components/bootstrap/dist/css/bootstrap.min.css"
-            ],
-            "js": [
-                "bower_components/angular/angular.min.js",
-                "bower_components/angular-route/angular-route.min.js",
-                "bower_components/bootstrap/dist/js/bootstrap.min.js"
-            ],
-            "run_at": "document_end",
-            "all_frames": false
-        }
-    ],
     "content_security_policy": "script-src 'self'; object-src 'self'",
-    "web_accessible_resources": [
-        "bower_components/angular/*"
-    ],
     "permissions": [
         "https://betfair.betstream.betgenius.com/"
     ]
