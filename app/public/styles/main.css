@@ -1,4 +1,15 @@
+body{
+
+	background-color: #EEE;
+}
+
 .full-layout {
 
-	width: 850px;
+	width: 600px;
+	padding: 20px;
 }
+
+#menuleft.slide{left:0}
+#all.hide{position:fixed;left:50%;top:0;width:100%}
+#all.slide{position:relative;}
+.slide,.hide{transition: all 0.2s ease;}

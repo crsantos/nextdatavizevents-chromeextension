@@ -19,6 +19,15 @@ app.controller('MainCtrl', function($scope, $timeout) {
 // Controller for handling the data retrieved
 app.controller('DataCtrl', function($scope, $http) {
   
+  //default the menu to not show
+  $scope.showmenu=false;
+
+  //this is the toggle function
+  $scope.toggleMenu = function(){
+    
+    $scope.showmenu = ($scope.showmenu) ? false : true;
+  }
+
   $scope.columns = [
     "Name",
     "StartTime",
