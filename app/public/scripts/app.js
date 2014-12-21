@@ -21,9 +21,9 @@ app.controller('DataCtrl', function($scope, $http) {
   
   $scope.columns = [
     "Name",
-    "Start Time",
-    "BetGenius EventId",
-    "Has Coverage",
+    "StartTime",
+    "BetGeniusId",
+    "Coverage",
     "EventId",
   ]
   $scope.sports = [
