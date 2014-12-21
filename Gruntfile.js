@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= config.app %>/*.html',
-          '<%= config.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= config.app %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= config.app %>/manifest.json',
           '<%= config.app %>/_locales/{,*/}*.json'
         ]
@@ -236,18 +236,18 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.{webp,gif}',
+            'public/images/{,*/}*.{webp,gif}',
             '{,*/}*.html',
-            'styles/{,*/}*.css',
-            'bower_components/bootstrap/dist/css/bootstrap.min.css',
-            'bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff',
-            'styles/fonts/{,*/}*.*',
+            'public/styles/{,*/}*.css',
+            'public/components/bootstrap/dist/css/bootstrap.min.css',
+            'public/components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff',
+            'public/styles/fonts/{,*/}*.*',
             '_locales/{,*/}*.json',
-            'scripts/{,*/}*.js',
-            'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/angular/angular.min.js',
-            'bower_components/angular-route/angular-route.min.js',
-            'bower_components/bootstrap/dist/js/bootstrap.min.js'
+            'public/scripts/{,*/}*.js',
+            'public/components/jquery/dist/jquery.min.js',
+            'public/components/angular/angular.min.js',
+            'public/components/angular-route/angular-route.min.js',
+            'public/components/bootstrap/dist/js/bootstrap.min.js'
           ]
         }]
       }
