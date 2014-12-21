@@ -42,7 +42,7 @@
               <tbody>
                 <tr ng-hide="events.length">No events</tr>
                 <tr class="{{event.hasCoverage ? 'success' : 'active'}}" ng-repeat="event in events | filter:search" repeat-done="repeatDone">
-                  <td><a href="https://www.betfair.com/sport/{{selectedSport.name | lowercase}}/event?eventId={{event.bookmakerEventId}}" class="event animate-repeat"><strong>{{event.name}}</strong></a></td>
+                  <td><a href="https://www.betfair.com/sport/{{selectedSport.name | lowercase}}/event?eventId={{event.bookmakerEventId}}" class="event animate-repeat" title="{{event.name}}"><strong>{{event.name | truncate:20}}</strong></a></td>
                   <td>{{event.startTime | date:'HH:mm'}} <br> {{event.startTime | date:'dd/MM/yyyy'}}</td>
                   <td>{{event.betgeniusEventId}}</td>
                   <td>
