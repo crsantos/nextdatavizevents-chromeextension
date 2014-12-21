@@ -239,8 +239,15 @@ module.exports = function (grunt) {
             'images/{,*/}*.{webp,gif}',
             '{,*/}*.html',
             'styles/{,*/}*.css',
+            'bower_components/bootstrap/dist/css/bootstrap.min.css',
+            'bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff',
             'styles/fonts/{,*/}*.*',
             '_locales/{,*/}*.json',
+            'scripts/{,*/}*.js',
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/angular/angular.min.js',
+            'bower_components/angular-route/angular-route.min.js',
+            'bower_components/bootstrap/dist/js/bootstrap.min.js'
           ]
         }]
       }
