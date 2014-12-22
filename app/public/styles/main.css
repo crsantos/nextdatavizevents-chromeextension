@@ -9,7 +9,6 @@ body{
 	padding: 20px;
 }
 
-#menuleft.slide{left:0}
-#all.hide{position:fixed;left:50%;top:0;width:100%}
-#all.slide{position:relative;}
+#filter-menu.slide{left:0, background-color:#ED5;}
+#filter-menu.hide{position:fixed;left:50%;top:0;width:100%}
 .slide,.hide{transition: all 0.2s ease;}
